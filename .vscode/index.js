@@ -1,11 +1,11 @@
-const start =   () =>  { 
-    let isso = 1
-    while (isso <= 10)
-        {
-        console.log(isso) 
-        isso ++
-        // isso = isso + 1 
-    }
+const start = () => {
+    let conte = 0
+        while (conte <= 10){
+            console.log(conte) 
+            conte ++
+            //conte = conte + 1       
+        // return
+    }        
 }
 
 start()
