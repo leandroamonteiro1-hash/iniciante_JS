@@ -36,6 +36,10 @@ const salvarMetas = async () =>{
 }
 
 const listarMetas = async () => {
+    if (metas.length ==0) {
+        mensagem = "Nenhuma meta criada."
+        return
+    }
     const respostas = await checkbox ({
         message: 'Use as setas para mudar de meta, o espaço para marcar ou desmarcar e o Enter para finalizar essa etapa',
         choices: [...metas] , 
@@ -95,6 +99,11 @@ const metasAbertas = async ()  => {
 }
 
 const deletarMetas = async() => {
+
+    if (metas.length ==0) {
+        mensagem = "Nenhuma meta criada."
+        return
+    }
     const metasDesmarcadas = metas.map ((fazer) =>{
         return {value: fazer.value, checked: false}
     })
